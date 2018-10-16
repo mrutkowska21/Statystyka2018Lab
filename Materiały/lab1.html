@@ -343,13 +343,15 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li>Wejdz na stronę <a href="http://github.com" class="uri">http://github.com</a>.</li>
 <li>Załóż konto (jeszcze nie masz ?)</li>
-<li></li>
+<li>Stwórz nowe repozytorium</li>
+<li>Zaimportuj do siebie <a href="https://github.com/sebkaz/Statystyka2018Lab" class="uri">https://github.com/sebkaz/Statystyka2018Lab</a> repozytorium z zajęć.</li>
+<li>Znajdź info o komendach pull i push</li>
 </ol>
 <div id="pakiety" class="section level4">
 <h4>Pakiety</h4>
-<pre class="r"><code># install
+<pre class="r"><code># install - just one time
 install.packages(&quot;dplyr&quot;)
-# load
+# load - always with new sesion
 library(dplyr)
 # check version
 packageVersion(&quot;dplyr&quot;)
@@ -366,6 +368,45 @@ list.files()</code></pre>
 <p>Download and install <a href="https://www.anaconda.com/download/">Anaconda</a>.</p>
 <p>W pakiecie tym otrzymujesz R Studio, ale również narzędzia do analiz danych w Pythonie.</p>
 </div>
+</div>
+<div id="skroty-r-studio" class="section level3">
+<h3>Skróty R Studio</h3>
+<ul>
+<li><em>Ctrl(Cmd)+Shift+C</em> - zakomentowanie lini bądź zbioru linii kodu</li>
+<li><em>Ctrl(Cmd)+Enter</em> - wykonanie zaznaczonego kodu</li>
+<li>W konsoli <em>Ctrl(Cmd)+Up</em> - historia komend</li>
+<li><em>Ctrl+L</em> - czyszczenie konsoli</li>
+<li>Jak w każdej konsoli <em>Tab</em> uzupełnia kod</li>
+<li><em>Ctrl(Cmd)+Shift+K</em> - kompilacja dokumentu</li>
+</ul>
+</div>
+<div id="gdzie-szukac-informacji" class="section level3">
+<h3>Gdzie szukać informacji</h3>
+<ol style="list-style-type: decimal">
+<li>SER. Warszawskie Spotkania Entuzjastów R <a href="http://bit.ly/2epbNb9" class="uri">http://bit.ly/2epbNb9</a></li>
+<li>eRka. Entuzjastów R Krakowska Alternatywa</li>
+<li>PAZUR. Poznań R User Group</li>
+</ol>
+<ul>
+<li>Funkcja <em>help()</em>. np <em>help(“sort”)</em></li>
+<li>Znak zapytania przed nazwą. np <em>?sort</em></li>
+<li>F1</li>
+<li>args(“nazwa funkcji”)</li>
+<li>apropos(“regression”), find(“regression”)</li>
+<li><p>example(“plot”)</p></li>
+<li>Internetowy kurs <strong>Pogromcy Danych</strong> <a href="http://pogromcydanych.icm.edu.pl" class="uri">http://pogromcydanych.icm.edu.pl</a></li>
+<li><em>StackExchange</em></li>
+<li><p><strong>Książki</strong></p></li>
+</ul>
+</div>
+<div id="r-jako-kalkulator" class="section level3">
+<h3>R jako kalkulator</h3>
+<pre class="r"><code>2+2</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>4*7</code></pre>
+<pre><code>## [1] 28</code></pre>
+<pre class="r"><code>9/3.2</code></pre>
+<pre><code>## [1] 2.8125</code></pre>
 </div>
 <div id="prosta-analiza-w-r" class="section level3">
 <h3>Prosta analiza w R</h3>

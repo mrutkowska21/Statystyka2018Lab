@@ -29,14 +29,17 @@ version
 
 1. Wejdz na stronę <http://github.com>.
 2. Załóż konto (jeszcze nie masz ?)
-3. 
+3. Stwórz nowe repozytorium
+4. Zaimportuj do siebie <https://github.com/sebkaz/Statystyka2018Lab> repozytorium z zajęć.
+5. Znajdź info o komendach pull i push
+
 
 #### Pakiety
 
 ```{r install, eval=FALSE}
-# install
+# install - just one time
 install.packages("dplyr")
-# load
+# load - always with new sesion
 library(dplyr)
 # check version
 packageVersion("dplyr")
@@ -56,6 +59,40 @@ list.files()
 Download and install [Anaconda](https://www.anaconda.com/download/).
 
 W pakiecie tym otrzymujesz R Studio, ale również narzędzia do analiz danych w Pythonie.
+
+### Skróty R Studio
+
+- _Ctrl(Cmd)+Shift+C_ - zakomentowanie lini bądź zbioru linii kodu
+- _Ctrl(Cmd)+Enter_ - wykonanie zaznaczonego kodu
+- W konsoli _Ctrl(Cmd)+Up_ - historia komend
+- _Ctrl+L_ - czyszczenie konsoli
+- Jak w każdej konsoli _Tab_ uzupełnia kod 
+- _Ctrl(Cmd)+Shift+K_ - kompilacja dokumentu
+
+### Gdzie szukać informacji
+
+1. SER. Warszawskie Spotkania Entuzjastów R <http://bit.ly/2epbNb9>
+2. eRka. Entuzjastów R Krakowska Alternatywa
+3. PAZUR. Poznań R User Group
+
+- Funkcja _help()_. np _help("sort")_
+- Znak zapytania przed nazwą. np _?sort_
+- F1
+- args("nazwa funkcji")
+- apropos("regression"), find("regression")
+- example("plot")
+
+* Internetowy kurs **Pogromcy Danych** <http://pogromcydanych.icm.edu.pl>
+* _StackExchange_
+* **Książki** 
+
+### R jako kalkulator
+```{r}
+2+2
+4*7
+9/3.2
+```
+
 
 ### Prosta analiza w R
 

@@ -87,49 +87,86 @@ W pakiecie tym otrzymujesz R Studio, ale również narzędzia do analiz danych w
 * **Książki** 
 
 ### R jako kalkulator
+
 ```{r}
 2+2
 4*7
 9/3.2
+3%%2
+sqrt(3)
+log(9)
+log(9,2)
+sin(pi/2)
+exp(1)
+```
+Jeżeli nie znasz jakiejś funkcji: 
+```{r}
+help("%%")
+?log 
 ```
 
-
-### Prosta analiza w R
+Otrzymane wyniki możesz przypisać do zmiennych. W R można używać do tego celu symbolu _=_ jednak zawsze będziemy używali _<-_. 
 
 ```{r}
-# install.packages('gapminder')
-# zaladuj biblioteke
-library(gapminder)
-# zaladuj dane
-data("gapminder")
-# co wyświetli sama funkcja data() ??
-data()
-# nagłówki 
-names(gapminder)
-# podsumowanie danych
-summary(gapminder)
-# analiza i odwołanie się do jednej zmiennej
-mean(gapminder$gdpPercap)
-# stworzenie nowego obiektu x i przypisanie do niego wartości średniej
-x <- mean(gapminder$gdpPercap)
-# wypisz wartość x
-x
-# ============
-# Aby ułatwić sobie analizę jednego zbioru 
-# możesz dodać go bezpośrednio do swojego środowiska
-attach(gapminder)
-# uwaga! aby wyjść z tego ustawinie użyj detach(nazwa)
-# Dzięki attach możesz posługiwać się nazwami kolumn bez odnoszenia się do całej tabeli danych.
-mean(gdpPercap)
-mean(pop)
-# zobacz jaki rozkład mają twoje dane
-hist(lifeExp)
-# a populacja ? 
-hist(pop)
-# a może logarytm zmiennej ? 
-hist(log(pop))
+x <- "napis"
+y <- 4
 
+# lista wszystkich zmiennych
+ls()
+
+# usuwanie zmiennych
+rm(x)
+ls()
 ```
+
+Znajdź informacje na temat następujących funkcji: 
+
+1. _ls()_
+2. _print()_
+3. _rm()_
+4. _"=="_
+
+
+
+
+
+
+<!-- ### Prosta analiza w R -->
+
+<!-- ```{r} -->
+<!-- # install.packages('gapminder') -->
+<!-- # zaladuj biblioteke -->
+<!-- library(gapminder) -->
+<!-- # zaladuj dane -->
+<!-- data("gapminder") -->
+<!-- # co wyświetli sama funkcja data() ?? -->
+<!-- data() -->
+<!-- # nagłówki  -->
+<!-- names(gapminder) -->
+<!-- # podsumowanie danych -->
+<!-- summary(gapminder) -->
+<!-- # analiza i odwołanie się do jednej zmiennej -->
+<!-- mean(gapminder$gdpPercap) -->
+<!-- # stworzenie nowego obiektu x i przypisanie do niego wartości średniej -->
+<!-- x <- mean(gapminder$gdpPercap) -->
+<!-- # wypisz wartość x -->
+<!-- x -->
+<!-- # ============ -->
+<!-- # Aby ułatwić sobie analizę jednego zbioru  -->
+<!-- # możesz dodać go bezpośrednio do swojego środowiska -->
+<!-- attach(gapminder) -->
+<!-- # uwaga! aby wyjść z tego ustawinie użyj detach(nazwa) -->
+<!-- # Dzięki attach możesz posługiwać się nazwami kolumn bez odnoszenia się do całej tabeli danych. -->
+<!-- mean(gdpPercap) -->
+<!-- mean(pop) -->
+<!-- # zobacz jaki rozkład mają twoje dane -->
+<!-- hist(lifeExp) -->
+<!-- # a populacja ?  -->
+<!-- hist(pop) -->
+<!-- # a może logarytm zmiennej ?  -->
+<!-- hist(log(pop)) -->
+
+<!-- ``` -->
 
 
 

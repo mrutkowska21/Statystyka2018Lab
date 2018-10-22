@@ -1,8 +1,8 @@
 ---
 title: "Lab1"
-author: "Sebastian Zając"
-date: "16 10 2018"
-output: html_document
+output: 
+  html_document: 
+    theme: paper
 ---
 
 ```{r setup, include=FALSE}
@@ -10,29 +10,60 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#### instalacja R
+#### Please do the fallowing before coming to class: 
 
 
-Install R <https://cran.r-project.org/bin/windows/base/> (latest version 3.5.1, 2018-07-02)
+- Install R <https://cran.r-project.org/bin/windows/base/> (latest version 3.5.1, 2018-07-02)
 
-Install R Studio <https://www.rstudio.com/products/rstudio/download/> (latest 1.1.456, 2018-07-19)
+- Install R Studio <https://www.rstudio.com/products/rstudio/download/> (latest 1.1.456, 2018-07-19)
 
+- Check Your version (R or R Studio):
 ```{r ver}
 version
 ```
 
-#### Środowisko R Studio
+
+#### Git Instalation on Windows
+
+Download Git from <http://git-scm.com/downloads>.
+
+Launch `git bash` from your list of programs.
+
+in terminal, type:
+
+```{bash, eval=FALSE}
+git config --global user.name 'Your Name'
+git config --global user.email 'your@email.com'
+```
+
+### Git with RStudio
+
+1. Create an account on [GitHub](https://github.com).
+2. Go to <https://github.com/sebkaz/Statystyka2018Lab> and click on the 'Fork' button (top right conrer).
+This will create a copy of the repository in your GitHub account.
+3. Start RStudio
+4. `File > New project > Version Control` select `Git`.  Type the repository URL and choose an appropriate location on your hard-drive to store the project.
+5. Go to `Tools > Shell`
+```{bash, eval=FALSE}
+git remote add upstream https://github.com/repoURL
+git remote -v
+# new branch 
+git checkout -b imieNazwisko master
+# close shell window
+```
+6. Modify or add new r script and save your modifications.
+7. commit your changes with commit message
+8. Go to `Tools > Shell`
+```{bash, eval=FALSE}
+git push origin imieNazwisko
+```
+9. Go to GitHub and view your fork. Click on the green icon.
+10. Create pull request with some message (name and what you have done).
+
+
+
+#### RStudio
 ![](Bez tytułu.jpg)
-
-
-### Zanim zaczniemy. GIT 
-
-1. Wejdz na stronę <http://github.com>.
-2. Załóż konto (jeszcze nie masz ?)
-3. Stwórz nowe repozytorium
-4. Zaimportuj do siebie <https://github.com/sebkaz/Statystyka2018Lab> repozytorium z zajęć.
-5. Znajdź info o komendach pull i push
-
 
 #### Pakiety
 
@@ -111,9 +142,10 @@ Otrzymane wyniki możesz przypisać do zmiennych. W R można używać do tego ce
 x <- "napis"
 y <- 4
 
+y+2
+
 # lista wszystkich zmiennych
 ls()
-
 # usuwanie zmiennych
 rm(x)
 ls()

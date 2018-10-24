@@ -1,0 +1,206 @@
+---
+title: "Lab1"
+output: 
+  html_document: 
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#### Please do the fallowing before coming to class: 
+
+
+- Install R <https://cran.r-project.org/bin/windows/base/> (latest version 3.5.1, 2018-07-02)
+
+- Install R Studio <https://www.rstudio.com/products/rstudio/download/> (latest 1.1.456, 2018-07-19)
+
+- Check Your version (R or R Studio):
+```{r ver}
+version
+```
+
+
+#### Git Instalation on Windows
+
+Download Git from <http://git-scm.com/downloads>.
+
+Launch `git bash` from your list of programs.
+
+in terminal, type:
+
+```{bash, eval=FALSE}
+git config --global user.name 'Your Name'
+git config --global user.email 'your@email.com'
+```
+
+### Git with RStudio
+
+1. Create an account on [GitHub](https://github.com).
+2. Go to <https://github.com/sebkaz/Statystyka2018Lab> and click on the 'Fork' button (top right conrer).
+This will create a copy of the repository in your GitHub account.
+3. Start RStudio
+4. `File > New project > Version Control` select `Git`.  Type the repository URL and choose an appropriate location on your hard-drive to store the project.
+5. Go to `Tools > Shell`
+```{bash, eval=FALSE}
+git remote add upstream https://github.com/repoURL
+git remote -v
+# new branch 
+git checkout -b imieNazwisko master
+# close shell window
+```
+6. Modify or add new r script and save your modifications.
+7. commit your changes with commit message
+8. Go to `Tools > Shell`
+```{bash, eval=FALSE}
+git push origin imieNazwisko
+```
+9. Go to GitHub and view your fork. Click on the green icon.
+10. Create pull request with some message (name and what you have done).
+
+
+
+#### RStudio
+![](Bez tytułu.jpg)
+
+#### Pakiety
+
+```{r install, eval=FALSE}
+# install - just one time
+install.packages("dplyr")
+# load - always with new sesion
+library(dplyr)
+# check version
+packageVersion("dplyr")
+# get the list of all installed packages
+library()
+# get the list of all loaded packages
+search()
+# main folder
+getwd()
+# setwd() - choose main folder
+# check files
+list.files()
+```
+
+Środowisko R możesz również zainstalować i używać w inny sposób:
+
+Download and install [Anaconda](https://www.anaconda.com/download/).
+
+W pakiecie tym otrzymujesz R Studio, ale również narzędzia do analiz danych w Pythonie.
+
+### Skróty R Studio
+
+- _Ctrl(Cmd)+Shift+C_ - zakomentowanie lini bądź zbioru linii kodu
+- _Ctrl(Cmd)+Enter_ - wykonanie zaznaczonego kodu
+- W konsoli _Ctrl(Cmd)+Up_ - historia komend
+- _Ctrl+L_ - czyszczenie konsoli
+- Jak w każdej konsoli _Tab_ uzupełnia kod 
+- _Ctrl(Cmd)+Shift+K_ - kompilacja dokumentu
+
+### Gdzie szukać informacji
+
+1. SER. Warszawskie Spotkania Entuzjastów R <http://bit.ly/2epbNb9>
+2. eRka. Entuzjastów R Krakowska Alternatywa
+3. PAZUR. Poznań R User Group
+
+- Funkcja _help()_. np _help("sort")_
+- Znak zapytania przed nazwą. np _?sort_
+- F1
+- args("nazwa funkcji")
+- apropos("regression"), find("regression")
+- example("plot")
+
+* Internetowy kurs **Pogromcy Danych** <http://pogromcydanych.icm.edu.pl>
+* _StackExchange_
+* **Książki** 
+
+### R jako kalkulator
+
+```{r}
+2+2
+4*7
+9/3.2
+3%%2
+sqrt(3)
+log(9)
+log(9,2)
+sin(pi/2)
+exp(1)
+```
+Jeżeli nie znasz jakiejś funkcji: 
+```{r}
+help("%%")
+?log 
+```
+
+Otrzymane wyniki możesz przypisać do zmiennych. W R można używać do tego celu symbolu _=_ jednak zawsze będziemy używali _<-_. 
+
+```{r}
+x <- "napis"
+y <- 4
+
+y+2
+
+# lista wszystkich zmiennych
+ls()
+# usuwanie zmiennych
+rm(x)
+ls()
+```
+
+Znajdź informacje na temat następujących funkcji: 
+
+1. _ls()_
+2. _print()_
+3. _rm()_
+4. _"=="_
+
+
+
+
+
+
+<!-- ### Prosta analiza w R -->
+
+<!-- ```{r} -->
+<!-- # install.packages('gapminder') -->
+<!-- # zaladuj biblioteke -->
+<!-- library(gapminder) -->
+<!-- # zaladuj dane -->
+<!-- data("gapminder") -->
+<!-- # co wyświetli sama funkcja data() ?? -->
+<!-- data() -->
+<!-- # nagłówki  -->
+<!-- names(gapminder) -->
+<!-- # podsumowanie danych -->
+<!-- summary(gapminder) -->
+<!-- # analiza i odwołanie się do jednej zmiennej -->
+<!-- mean(gapminder$gdpPercap) -->
+<!-- # stworzenie nowego obiektu x i przypisanie do niego wartości średniej -->
+<!-- x <- mean(gapminder$gdpPercap) -->
+<!-- # wypisz wartość x -->
+<!-- x -->
+<!-- # ============ -->
+<!-- # Aby ułatwić sobie analizę jednego zbioru  -->
+<!-- # możesz dodać go bezpośrednio do swojego środowiska -->
+<!-- attach(gapminder) -->
+<!-- # uwaga! aby wyjść z tego ustawinie użyj detach(nazwa) -->
+<!-- # Dzięki attach możesz posługiwać się nazwami kolumn bez odnoszenia się do całej tabeli danych. -->
+<!-- mean(gdpPercap) -->
+<!-- mean(pop) -->
+<!-- # zobacz jaki rozkład mają twoje dane -->
+<!-- hist(lifeExp) -->
+<!-- # a populacja ?  -->
+<!-- hist(pop) -->
+<!-- # a może logarytm zmiennej ?  -->
+<!-- hist(log(pop)) -->
+
+<!-- ``` -->
+
+
+
+
+

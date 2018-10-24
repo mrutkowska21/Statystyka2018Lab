@@ -1,5 +1,5 @@
 ---
-title: "Lab1"
+title: "Laboratorium 1"
 output: 
   html_document: 
     theme: paper
